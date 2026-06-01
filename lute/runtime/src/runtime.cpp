@@ -468,11 +468,11 @@ lua_State* setupState(Runtime& runtime, std::function<void(lua_State*)> doBefore
     // register the builtin tables
     luaL_openlibs(L);
 
-    lua_pushnil(L);
-    lua_setglobal(L, "setfenv");
+    //lua_pushnil(L);
+    //lua_setglobal(L, "setfenv");
 
-    lua_pushnil(L);
-    lua_setglobal(L, "getfenv");
+    //lua_pushnil(L);
+    //lua_setglobal(L, "getfenv");
 
     if (doBeforeSandbox)
         doBeforeSandbox(L);
